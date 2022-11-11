@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/moodTrackerFragment">
+
+    <fragment
+        android:id="@+id/moodTrackerFragment"
+        android:name="com.app.mymoodtracker.moodtracker.MoodTrackerFragment"
+        android:label="Mood Tracker"
+        tools:layout="@layout/fragment_mood_tracker">
+        <action
+            android:id="@+id/action_moodTrackerFragment_to_moodQualityFragment"
+            app:destination="@id/moodQualityFragment" />
+        <action
+            android:id="@+id/action_moodTrackerFragment_to_moodDetailsFragment2"
+            app:destination="@id/moodQualityFragment" />
+
+        <action
+            android:id="@+id/action_moodTrackerFragment_to_moodDetailsFragment"
+            app:destination="@id/moodDetailsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/moodQualityFragment"
+        android:name="com.app.mymoodtracker.moodquality.MoodQualityFragment"
+        android:label="Mood Quality"
+        tools:layout="@layout/fragment_mood_quality">
+        <action
+            android:id="@+id/action_moodQualityFragment_to_moodTrackerFragment"
+            app:destination="@id/moodTrackerFragment"
+            app:popUpTo="@id/moodTrackerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/moodDetailsFragment2"
+        android:name="com.app.mymoodtracker.mooddetails.MoodDetailsFragment"
+        android:label="Mood Details"
+        tools:layout="@layout/fragment_mood_details">
+        <action
+            android:id="@+id/action_moodDetailsFragment2_to_moodTrackerFragment"
+            app:destination="@id/moodTrackerFragment" />
+        <argument
+            android:name="moodsKey"
+            app:argType="long" />
+    </fragment>
+</navigation>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="moodQualityViewModel"
+            type="com.app.mymoodtracker.moodquality.MoodQualityViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".moodquality.MoodQualityFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/how_are_you_txt"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_marginTop="@dimen/margin_32dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/mood_0"
+                android:onClick="@{() -> moodQualityViewModel.onSetMoodQuality(0)}"
+                android:src="@drawable/ic_happy_emoji"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/mood_1"
+                android:onClick="@{() -> moodQualityViewModel.onSetMoodQuality(1)}"
+                android:src="@drawable/ic_nervous_emoji"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintStart_toEndOf="@+id/imageView" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/mood_3"
+                android:onClick="@{() -> moodQualityViewModel.onSetMoodQuality(2)}"
+                android:src="@drawable/ic_excited_emoji"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView2" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_marginTop="16dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/mood_4"
+                android:onClick="@{() -> moodQualityViewModel.onSetMoodQuality(3)}"
+                android:src="@drawable/ic_depressed_emoji"
+                app:layout_constraintEnd_toStartOf="@+id/imageView5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/mood_4"
+                android:onClick="@{() -> moodQualityViewModel.onSetMoodQuality(4)}"
+                android:src="@drawable/ic_relaxed_emoji"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                app:layout_constraintEnd_toStartOf="@+id/imageView6"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/mood_5"
+                android:onClick="@{() -> moodQualityViewModel.onSetMoodQuality(5)}"
+                android:src="@drawable/ic_sad_emoji"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="@+id/imageView5"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_marginTop="84dp"
+                android:layout_marginEnd="@dimen/margin_8dp"
+                android:text="@string/write_something_about_it"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+            <EditText
+                android:id="@+id/mood_content_txt"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="@dimen/margin_32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="@dimen/margin_32dp"
+                android:background="@drawable/shape_edittext_custom"
+                android:ems="10"
+                android:gravity="start|top"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:padding="3dp"
+                android:text="@={moodQualityViewModel.moodContent}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                tools:ignore="LabelFor" />
+
+            <Button
+                android:id="@+id/done_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="@dimen/margin_16dp"
+                android:layout_marginBottom="32dp"
+                android:backgroundTint="@color/green"
+                android:onClick="@{() -> moodQualityViewModel.onClickDoneButton()}"
+                android:text="@string/done_btn_txt"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mood_content_txt" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/MoodTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mood_Happy"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="133dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/mood_Angry"
+                android:onClick="@{() -> moodQualityViewModel.onSetMoodQuality(6)}"
+                app:layout_constraintBottom_toTopOf="@+id/textView3"
+                app:layout_constraintEnd_toStartOf="@+id/imageView8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                app:srcCompat="@drawable/ic_angry_emoji" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/mood_Bored"
+                android:onClick="@{() -> moodQualityViewModel.onSetMoodQuality(7)}"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toTopOf="@+id/imageView7"
+                app:srcCompat="@drawable/ic_bored_emoji" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/mood_Scared"
+                android:onClick="@{() -> moodQualityViewModel.onSetMoodQuality(8)}"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView8"
+                app:layout_constraintTop_toTopOf="@+id/imageView8"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_scared_emoji" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/MoodTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/black"
+                android:text="@string/mood_Nervous"
+                app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                app:layout_constraintStart_toStartOf="@+id/imageView2"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/MoodTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mood_Excited"
+                app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                app:layout_constraintStart_toStartOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/MoodTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mood_Depressed"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                app:layout_constraintStart_toStartOf="@+id/imageView4"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+            <TextView
+                android:id="@+id/textView7"
+                style="@style/MoodTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mood_Relaxed"
+                app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                app:layout_constraintStart_toStartOf="@+id/imageView5"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+            <TextView
+                android:id="@+id/textView8"
+                style="@style/MoodTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mood_Sad"
+                app:layout_constraintEnd_toEndOf="@+id/imageView6"
+                app:layout_constraintStart_toStartOf="@+id/imageView6"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+            <TextView
+                android:id="@+id/textView9"
+                style="@style/MoodTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mood_Angry"
+                app:layout_constraintEnd_toEndOf="@+id/imageView7"
+                app:layout_constraintStart_toStartOf="@+id/imageView7"
+                app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+            <TextView
+                android:id="@+id/textView10"
+                style="@style/MoodTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mood_Bored"
+                app:layout_constraintEnd_toEndOf="@+id/imageView8"
+                app:layout_constraintStart_toStartOf="@+id/imageView8"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+            <TextView
+                android:id="@+id/textView11"
+                style="@style/MoodTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mood_Scared"
+                app:layout_constraintEnd_toEndOf="@+id/imageView9"
+                app:layout_constraintStart_toStartOf="@+id/imageView9"
+                app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

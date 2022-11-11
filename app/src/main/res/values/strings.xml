@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Mood Tracker</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mood_tracker_button_txt">MOOD</string>
+    <string name="clear_button_txt">CLEAR</string>
+    <string name="your_mood_txt">Your Mood:</string>
+    <string name="how_are_you_txt">How are you?</string>
+    <string name="mood_1">mood_1</string>
+    <string name="mood_0">mood_0</string>
+    <string name="mood_2">mood_2</string>
+    <string name="mood_3">mood_3</string>
+    <string name="mood_4">mood_4</string>
+    <string name="mood_5">mood_5</string>
+    <string name="write_something_about_it">Write something about it:</string>
+    <string name="done_btn_txt">Done</string>
+
+    <string name="mood_Happy">Happy</string>
+    <string name="mood_Nervous">Nervous</string>
+    <string name="mood_Excited">Excited</string>
+    <string name="mood_Depressed">Depressed</string>
+    <string name="mood_Relaxed">Relaxed</string>
+    <string name="mood_Sad">Sad</string>
+    <string name="mood_Angry">Angry</string>
+    <string name="mood_Bored">Bored</string>
+    <string name="mood_Scared">Scared</string>
+
+    <string name="quality"><![CDATA[<b>Quality:</b>]]></string>
+    <string name="hours_slept"><![CDATA[<b>Hours:Minutes:Seconds</b>]]></string>
+    <string name="start_time"><![CDATA[<b>Start:</b>]]></string>
+    <string name="next">Next</string>
+    <string name="clear">Clear</string>
+    <string name="option_menu_txt">Delete All</string>
+    <string name="fab_icon">Fab Icon</string>
+    <string name="ok">ok</string>
+    <string name="quality_image">Quality image</string>
+    <string name="mood_contents">Start a very fresh morning.</string>
+    <string name="mood_angry">Angry</string>
+</resources>
